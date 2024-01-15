@@ -1,123 +1,631 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <link rel="stylesheet" href="css/min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/my-default.css">
+  <style>
+    html {
+      min-width: 300px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-align: justify;
+      transition: transform .5s;
+    }
+
+    header {
+      background-color: #383838;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .Big-Logo {
+      display: block;
+      text-align: center;
+      width: 200px;
+    }
+
+    .Big-Logo-1 {
+      color: black;
+      font-size: 30px;
+    }
+
+    .Big-Logo-1:hover {
+      color: white;
+    }
+
+    .Big-Logo-2:hover {
+      color: black;
+    }
+
+    .Big-Logo-2 {
+      color: white;
+      font-size: 30px;
+    }
+
+    .nav-mid>ul>* {
+      margin-inline: 10px;
+    }
+
+    .nav-end {
+      margin-right: 15px;
+      margin-left: 150px;
+    }
+
+    .icon:hover {
+      filter: brightness(1) invert(1) sepia(.5) hue-rotate(310deg) saturate(1000%);
+    }
+
+    *:hover>*>.icon {
+      filter: brightness(1) invert(1) sepia(.5) hue-rotate(310deg) saturate(1000%);
+    }
+
+    header li:hover * {
+      color: #000;
+    }
+
+    .small {
+      display: none;
+    }
+
+    aside {
+      position: sticky;
+      top: 0;
+      background-color: black;
+      height: 40px;
+      z-index: 999;
+    }
+
+    body {
+      position: relative;
+      background-color: #00000050;
+    }
+
+    .btn {
+      border-radius: 0 !important;
+      border: none;
+    }
+
+    .aside-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.501px;
+    }
+
+
+    .aside-nav-icons {
+      filter: saturate(10) grayscale(1) invert(1);
+      height: 25px;
+      width: 25px;
+      padding: 0;
+    }
+
+    .aside-nav-icons.last {
+      filter: saturate(10) grayscale(1);
+    }
+
+    .section-1 {
+      position: relative;
+    }
+
+    .slide-1 {
+      object-fit: contain;
+      width: max(100%, 1080px);
+      filter: brightness(.9) contrast(1.3);
+    }
+
+    .slide-2 {
+      position: relative;
+      transform: translateY(-100px);
+      z-index: -1;
+      object-fit: contain;
+      width: max(100%, 1080px);
+    }
+
+    .slide-3 {
+      position: relative;
+      transform: translateY(-200px);
+      z-index: -1;
+      object-fit: contain;
+      width: max(100%, 1080px);
+    }
+
+    h1 {
+      position: absolute;
+      top: 38%;
+      padding-block: 30px;
+      background-color: #00000075;
+      color: aliceblue;
+      font-size: 30px !important;
+    }
+
+    h2 {
+      text-align: center;
+      /* margin-block: 40px; */
+    }
+
+    section {
+      color: aliceblue;
+    }
+
+    p * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    strong {
+      font-weight: 900;
+    }
+
+    .section-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: calc(100% - 100px);
+      min-height: 150px;
+      /* background-color: #a23030; */
+      background-color: aliceblue;
+      color: #000;
+      margin: auto;
+      transform: translateY(-50px);
+      padding: 50px;
+    }
+
+    .section-4 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: calc(100% - 100px);
+      min-height: 150px;
+      /* background-color: #a23030; */
+      background-color: aliceblue;
+      color: #000;
+      margin: auto;
+      transform: translateY(-150px);
+      padding: 50px;
+    }
+
+    .section-6 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: calc(100% - 100px);
+      min-height: 150px;
+      /* background-color: #a23030; */
+      background-color: aliceblue;
+      color: #000;
+      margin: auto;
+      transform: translateY(-250px);
+      padding: 50px;
+    }
+
+
+    .section-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 40px;
+    }
+
+    .section-card-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 40px;
+    }
+
+    .inverse {
+      flex-direction: row-reverse;
+      padding-top: 0px;
+    }
+
+    .section-card-col>p,
+    .section-card>p {
+      margin: 35px;
+      width: 380px;
+    }
+
+    .span-read-more-end {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      text-align: center;
+      width: 100%;
+      margin-block: 10px;
+    }
+
+    .span-read-more-start {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      text-align: center;
+      width: 100%;
+      margin-block: 10px;
+    }
+    .span-read-more-center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      margin-block: 10px;
+    }
+
+    .read-more {
+      font-family: lemon, Arial, Helvetica, sans-serif;
+      color: black;
+      background-color: white;
+    }
+
+    .read-more:hover {
+      color: aliceblue;
+      background-color: black;
+    }
+
+    .read-more-dark {
+      font-family: lemon, Arial, Helvetica, sans-serif;
+      color: white;
+      background-color: black;
+    }
+
+    .read-more-dark:hover {
+      color: black;
+      background-color: white;
+    }
+
+    *:hover>*>.icon {
+      filter: brightness(1) invert(1) sepia(.5) hue-rotate(310deg) saturate(1000%);
+    }
+    .game-design-wrap{
+      display: flex;
+      flex-direction: row;
+    }
+
+     
+    footer{
+      position: relative;
+      z-index: 01;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -300px;
+      background-color: #383838;
+      color: white;
+      min-height: 500px;
+    }
+    footer * {
+      font-family: Arial, Helvetica, sans-serif !important;
+    }
+    .copy{
+      position: absolute;
+      bottom: 10px;
+    }
+    form{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    input[type="email"]{
+      height: 40px;
+      padding: 5px;
+      margin-left: 15px;
+      margin-right: 0;
+    }
+    input[type="submit"]{
+      height: 38px !important;
+      margin-left: 0;
+      margin-right: 15px;
+    }
+    @media screen and (max-width:780px) {
+      .big {
+        display: none;
+      }
+
+      .small {
+        display: initial;
+      }
+
+      .Big-Logo {
+        width: 100px;
+      }
+
+      .nav-end {
+        margin-left: 35px;
+      }
+
+      .section-card {
+        flex-direction: column;
+      }
+
+      .section-card>p {
+        margin: 35px;
+        width: 377px;
+      }
+
+      .section-2,
+      .section-4,
+      .section-5 {
+        width: calc(100% - 50px);
+      }
+
+      .slide-1 {
+        transform: translateX(-20%);
+      }
+
+      .slide-2 {
+        transform: translateX(-20%) translateY(-100px);
+      }
+
+      .slide-3 {
+        transform: translateX(-20%) translateY(-200px);
+      }
+
+      .span-read-more-start,
+      .span-read-more-end {
+        justify-content: center;
+      }
+    }
+
+    @media screen and (max-width:1020px) {
+      .game-design-wrap{
+        flex-direction: column;
+      }
+    }
+   
+  </style>
 </head>
 
 <body>
-  <header style="display: flex; align-items: center; justify-content: space-between; background-color: #ccc;">
-    <h1>GameDev</h1>
-    <ul type="none" style="display: flex; justify-content: space-around; width: 200px;">
-      <li><a href="#">News</a></li>
-      <li><a href="#">Info</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+  <header>
 
-  </header>
-  <aside style="float: left; background-color: #aaa; height: 200svh; width: 100px;">
-    <nav>
-      <a>Unreal</a>
-      <br>
-      <a href="#">unity</a>
+    <nav class="nav-start">
+      <a class="Big-Logo" href="simple.html">
+        <span class="big Big-Logo-1">Game<span class="Big-Logo-2">Dev</span></span>
+        <span class="small Big-Logo-1">G<span class="Big-Logo-2">D</span></span>
+      </a>
     </nav>
 
+    <nav class="nav-mid">
+      <ul>
+
+        <li>
+          <a href="simple.html"> <img class="icon" src="images/icons/homeW.png" alt=""> <span class="big"> <br> Home
+            </span></a>
+        </li>
+        <li>
+          <a href="about.html"> <img class="icon" src="images/icons/newsW.png" alt=""> <span class="big"> <br> About Us
+            </span> </a>
+        </li>
+        <li>
+          <a href="contact.html"> <img class="icon" src="images/icons/contactW.png" alt=""> <br> <span class="big">
+              Contact </span> </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <nav class="nav-end">
+      <ul>
+
+        <li> <a href="#"> <img class="icon" src="images/icons/loginW.png" alt=""> <br> <span class="big">Login</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+  </header>
+
+  <aside>
+    <nav>
+      <ul class="aside-nav">
+
+
+
+        <li>
+          <div class="btn-group">
+            <a href="#cpp" class="btn btn-outline-light"> <span class="big"> C++ </span> <img
+                class="aside-nav-icons small" src="images/content/cpp-inv.png" alt=""></a>
+            <a href="#cs" class="btn btn-outline-light"> <span class="big"> C# </span> <img
+                class="aside-nav-icons small" src="images/content/c-sharp-inv.png" alt=""></a>
+          </div>
+        </li>
+        <span class=" mx-2"></span>
+        <!-- <div class="w-5px h-50px bg-white mx-2"></div> -->
+        <span class="mx-2"></span>
+
+        <li>
+          <div class="btn-group">
+            <a href="#ue" class="btn btn-outline-light"> <span class="big"> Unreal </span> <img
+                class="aside-nav-icons small" src="images/content/Unreal.png" alt=""> </a>
+            <a href="#un" class="btn btn-outline-light"> <span class="big"> Unity </span> <img
+                class="aside-nav-icons small" src="images/content/Unity1.png" alt=""></a>
+          </div>
+        </li>
+
+        <span class="mx-2"></span>
+        <!-- <div class="w-5px h-50px bg-white mx-2"></div> -->
+        <span class="mx-2"></span>
+
+        <li>
+          <div class="btn-group">
+            <a href="#" class="btn btn-outline-light"> <span class="big"> Blender </span> <img
+                class="aside-nav-icons small" src="images/content/blenderIcon-invert.png" alt=""> </a>
+            <a href="#" class="btn btn-outline-light"><span class="big"> Maya </span> <img
+                class="aside-nav-icons last small" src="images/content/maya-icon-invert.png" alt=""> </a>
+          </div>
+        </li>
+
+
+      </ul>
+    </nav>
   </aside>
 
+
   <main>
-
-    <h1>Game Developer path</h1>
-    <p>some intro about what a game developer is</p>
-
-
-    <section>
-      <article>
-        <h2>Programming Language</h2>
-        <p>
-          If you want your game to actually work, you’ll need to put some time into programming. This is often one of
-          the most technical aspects of game development, so it’s important to have at least a basic understanding of
-          common programming languages like C++ , Unreal Blueprints ,C# or UnityScript.
-
-        </p>
-        <dl>
-          <dt>C++</dt>
-          <dd>Introduction on C++ in gaming</dd>
-          <dt>C#</dt>
-          <dd>Introduction on C# in gaming</dd>
-        </dl>
-      </article>
+    <section class="section-1">
+      <img src="images/content/supra-aest.jpg" class="slide-1" alt="">
+      <h1 class="w-100 display-5 text-center">A guide for game developers</h1>
     </section>
 
-    <section>
-      <article>
-        <h2>Game Engine</h2>
-        <h3>Unreal</h3>
-        <p>Introduction on unreal</p>
-        <h3>Unity</h3>
-        <p>Introduction on unity</p>
-      </article>
-    </section>
+    <section id="cpp" class="section-2">
+      <h2> Programming Languages </h2>
 
-    <section>
-      <article>
-        <h2>Game Design and Animations Software</h2>
-        <p>
-          After you have a solid concept, it’s time to start designing the game. This includes everything from
-          nailing down the details of the gameplay mechanics to creating engaging-level designs.
-        </p>
-        <dl>
-          <dt>Blender</dt>
-          <dd>Introduction on Blender</dd>
-          <dt>Maya</dt>
-          <dd>Introduction on Maya</dd>
-        </dl>
-      </article>
-    </section>
+      <!-- C++ Section -->
+      <div class="section-card">
 
-    <section>
-      <article>
-        <h2>Art and Asset Creation</h2>
+        <img src="images/content/cpp.png" alt="" width="200" height="200">
+
 
         <p>
-          In order for your game to look and feel its best, you’ll need to create high-quality art assets. This includes
-          everything from 2D sprites and 3D models to user interface elements and background scenery.
+          <strong>C++</strong> is pivotal in game development, especially within engines like Unreal. It ensures high
+          performance,
+          precise control over game logic, and widespread industry use. With its cross-platform compatibility and
+          versatility, C++ is crucial for creating efficient, customizable.
 
+          <span class="span-read-more-end">
+            <button id="cs" class="btn btn-light read-more-dark">Read more</button>
+          </span>
         </p>
 
-      </article>
-    </section>
+      </div>
+      <!-- C# Section -->
+      <div class="section-card inverse">
 
-    <section>
-      <article>
-        <h2>Testing  </h2>
+        <img src="images/content/csharp.png" alt="" width="200" height="200">
+
 
         <p>
-          Once you have a playable build of your game, it’s time to start testing. This includes playtesting your game internally to iron out any bugs or glitches, as well as conducting external beta tests with larger groups of players.
+          <strong>C#</strong> is a widely used programming language for game development, especially with Unity. Known
+          for its
+          object-oriented approach, clean syntax, and cross-platform capabilities, C# offers an accessible and
+          efficient solution for creating games, supported by an active developer community.
+
+          <span class="span-read-more-start">
+            <button class="btn btn-light read-more-dark">Read more</button>
+          </span>
+        </p>
+      </div>
+
+
+
+    </section>
+
+    <section class="section-3">
+      <img src="images/content/slider-4.jpg" alt="" class="slide-2">
+    </section>
+
+    <section id="ue" class="section-4">
+      <h2> Game Engines </h2>
+
+      <!-- C++ Section -->
+      <div class="section-card">
+
+        <img src="images/content/Unreal.png" alt="" width="200" height="200">
+
+
+        <p>
+          <strong>Unreal Engine</strong>, powered by C++, excels in 3D game development. It offers advanced tools for
+          creating visually stunning and immersive 3D environments, combining the flexibility of C++ programming with
+          features like realistic graphics, lighting, and physics simulations.
+
+          <span class="span-read-more-end">
+            <button id="un" class="btn btn-light read-more-dark">Read more</button>
+          </span>
         </p>
 
-      </article>
+      </div>
+      <!-- C# Section -->
+      <div class="section-card inverse">
+
+        <img src="images/content/Unity1.png" alt="" width="200" height="200">
+
+
+        <p>
+          <strong>Unity</strong> is a popular and flexible game development engine with cross-platform support, a
+          user-friendly interface, and scripting in C#. It is known for its Asset Store, built-in physics, and
+          versatility in 3D and 2D development. Widely used with a strong community and regular updates.
+
+          <span class="span-read-more-start">
+            <button class="btn btn-light read-more-dark">Read more</button>
+          </span>
+        </p>
+      </div>
+
+
+
     </section>
 
-    <section>
-      <article>
-        <h2>Ideas and Creativity</h2>
-
-        <p>This is where it all begins – coming up with the initial idea for your game. Once you have an idea,
-          it’s important to start fleshing it out by asking yourself key questions such as “What kind of
-          gameplay experience do I want to create?”, “What kind of story do I want to tell?”, “Who is my
-          target audience?” etc.</p>
-
-      </article>
+    <section class="section-5">
+      <img src="images/content/slider-6.jpg" alt="" class="slide-3">
     </section>
 
 
+    <section id="ue" class="section-6">
+      <h2> Game Design </h2>
 
+      <!-- C++ Section -->
+      <div class="game-design-wrap">
+        <div class="section-card-col">
+
+          <img src="images/content/blender-maya.png" alt="" width="200" height="200">
+
+
+          <p>
+            <strong>Blender 3D</strong>, is a versatile and free open-source software for 3D modeling, animation, rendering, and more. It's widely used for creating 3D content, including characters, scenes, and visual effects in games, films, and animations. Blender features a user-friendly interface, a powerful set of tools, and an active community, making it a popular choice for artists and developers in the 3D content creation industry.
+
+            <span class="span-read-more-center">
+              <button id="un" class="btn btn-light read-more-dark">Read more</button>
+            </span>
+          </p>
+
+        </div>
+        <!-- C# Section -->
+        <div class="section-card-col">
+
+          <img src="images/content/Maya-Yassine.webp" alt="" width="200" height="200">
+
+
+          <p>
+            <strong>Maya 3D</strong>, by Autodesk, is a premier software for professional 3D modeling and animation. Leveraged in the entertainment industry, it excels in crafting characters, environments, and visual effects for films, games, and animations. Known for its advanced features and robust animation tools, Maya stands as a go-to choice for 3D artists and animators. Its versatility and integration with other Autodesk products contribute to its widespread adoption.
+
+            <span class="span-read-more-center">
+              <button class="btn btn-light read-more-dark">Read more</button>
+            </span>
+          </p>
+        </div>
+
+      </div>
+
+    </section>
 
   </main>
 
   <footer>
 
+    <form action="">
+      <label for="email"> <strong> Subscribe   </strong> </label>
+      <input type="email" placeholder="Email" id="email">
+      <input class="btn btn-outline-light read-more" type="submit" value="Register">
+    </form>
+
+    <address>dwdwdw</address>
+
+    <span class="copy"> Copyright &copy; 2024 <strong>Anouar</strong> , Inc. All rights reserved. </span>
+
   </footer>
+
 
 </body>
 
