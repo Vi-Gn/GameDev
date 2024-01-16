@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="css/my-default.css">
   <style>
     html {
-      min-width: 300px;
+      min-width: 500px;
     }
-
+   
     * {
       margin: 0;
       padding: 0;
@@ -181,6 +181,11 @@
       transform: translateY(-50px);
       padding: 50px;
     }
+    .section-3 {
+      position: relative;
+      z-index: -1;
+      transform: translateY(-100px);
+    }
 
     .section-4 {
       display: flex;
@@ -192,21 +197,26 @@
       background-color: aliceblue;
       color: #000;
       margin: auto;
-      transform: translateY(-150px);
+      transform: translateY(-250px);
       padding: 50px;
+    }
+    .section-5{
+      position: relative;
+      z-index: -1;
+      transform: translateY(-300px);
     }
 
     .section-6 {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: calc(100% - 100px);
+      width: calc(100% - 50px);
       min-height: 150px;
       /* background-color: #a23030; */
       background-color: aliceblue;
       color: #000;
       margin: auto;
-      transform: translateY(-250px);
+      transform: translateY(-550px);
       padding: 50px;
     }
 
@@ -300,7 +310,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: -300px;
+      margin-top: -500px;
+      margin-bottom: 0;
       background-color: #383838;
       color: white;
       min-height: 500px;
@@ -355,27 +366,28 @@
       }
 
       .section-2,
-      .section-4,
-      .section-5 {
+      .section-4 {
         width: calc(100% - 50px);
       }
-
-      .slide-1 {
+    
+      .slide-1 {     
         transform: translateX(-20%);
       }
 
       .slide-2 {
         transform: translateX(-20%) translateY(-100px);
       }
-
       .slide-3 {
         transform: translateX(-20%) translateY(-200px);
-      }
+      } 
+     
 
       .span-read-more-start,
       .span-read-more-end {
         justify-content: center;
       }
+      footer{flex-direction: column;
+    }
     }
 
     @media screen and (max-width:1020px) {
