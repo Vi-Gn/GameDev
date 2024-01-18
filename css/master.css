@@ -220,7 +220,7 @@ strong {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 60px !important;
 }
 
 .section-card-col {
@@ -228,7 +228,7 @@ strong {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
 .inverse {
