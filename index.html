@@ -7,396 +7,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/my-default.css">
-  <style>
-    html {
-      min-width: 500px;
-    }
-   
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      text-align: justify;
-      transition: transform .5s;
-      overflow-x: hidden;
-    }
-
-    header {
-      background-color: #383838;
-      height: 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .Big-Logo {
-      display: block;
-      text-align: center;
-      width: 200px;
-    }
-
-    .Big-Logo-1 {
-      color: black;
-      font-size: 30px;
-    }
-
-    .Big-Logo-1:hover {
-      color: white;
-    }
-
-    .Big-Logo-2:hover {
-      color: black;
-    }
-
-    .Big-Logo-2 {
-      color: white;
-      font-size: 30px;
-    }
-
-    .nav-mid>ul>* {
-      margin-inline: 10px;
-    }
-
-    .nav-end {
-      margin-right: 15px;
-      margin-left: 150px;
-    }
-
-    .icon:hover {
-      filter: brightness(1) invert(1) sepia(.5) hue-rotate(310deg) saturate(1000%);
-    }
-
-    *:hover>*>.icon {
-      filter: brightness(1) invert(1) sepia(.5) hue-rotate(310deg) saturate(1000%);
-    }
-
-    header li:hover * {
-      color: #000;
-    }
-
-    .small {
-      display: none;
-    }
-
-    aside {
-      position: sticky;
-      top: 0;
-      background-color: black;
-      height: 40px;
-      z-index: 999;
-    }
-
-    body {
-      position: relative;
-      background-color: #00000050;
-    }
-
-    .btn {
-      border-radius: 0 !important;
-      border: none;
-    }
-
-    .aside-nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1.501px;
-    }
-
-
-    .aside-nav-icons {
-      filter: saturate(10) grayscale(1) invert(1);
-      height: 25px;
-      width: 25px;
-      padding: 0;
-    }
-
-    .aside-nav-icons.last {
-      filter: saturate(10) grayscale(1);
-    }
-
-    .section-1 {
-      position: relative;
-    }
-
-    .slide-1 {
-      object-fit: contain;
-      width: max(100%, 1080px);
-      filter: brightness(.9) contrast(1.3);
-    }
-
-    .slide-2 {
-      position: relative;
-      transform: translateY(-100px);
-      z-index: -1;
-      object-fit: contain;
-      width: max(100%, 1080px);
-    }
-
-    .slide-3 {
-      position: relative;
-      transform: translateY(-200px);
-      z-index: -1;
-      object-fit: contain;
-      width: max(100%, 1080px);
-    }
-
-    h1 {
-      position: absolute;
-      top: 38%;
-      padding-block: 30px;
-      background-color: #00000075;
-      color: aliceblue;
-      font-size: 30px !important;
-    }
-
-    h2 {
-      text-align: center;
-      /* margin-block: 40px; */
-    }
-
-    section {
-      color: aliceblue;
-    }
-
-    p * {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    strong {
-      font-weight: 900;
-    }
-
-    .section-2 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: calc(100% - 100px);
-      min-height: 150px;
-      /* background-color: #a23030; */
-      background-color: aliceblue;
-      color: #000;
-      margin: auto;
-      transform: translateY(-50px);
-      padding: 50px;
-    }
-    .section-3 {
-      position: relative;
-      z-index: -1;
-      transform: translateY(-100px);
-    }
-
-    .section-4 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: calc(100% - 100px);
-      min-height: 150px;
-      /* background-color: #a23030; */
-      background-color: aliceblue;
-      color: #000;
-      margin: auto;
-      transform: translateY(-250px);
-      padding: 50px;
-    }
-    .section-5{
-      position: relative;
-      z-index: -1;
-      transform: translateY(-300px);
-    }
-
-    .section-6 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: calc(100% - 50px);
-      min-height: 150px;
-      /* background-color: #a23030; */
-      background-color: aliceblue;
-      color: #000;
-      margin: auto;
-      transform: translateY(-550px);
-      padding: 50px;
-    }
-
-
-    .section-card {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 40px;
-    }
-
-    .section-card-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding-top: 40px;
-    }
-
-    .inverse {
-      flex-direction: row-reverse;
-      padding-top: 0px;
-    }
-
-    .section-card-col>p,
-    .section-card>p {
-      margin: 35px;
-      width: 380px;
-    }
-
-    .span-read-more-end {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      text-align: center;
-      width: 100%;
-      margin-block: 10px;
-    }
-
-    .span-read-more-start {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      text-align: center;
-      width: 100%;
-      margin-block: 10px;
-    }
-    .span-read-more-center {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      text-align: center;
-      width: 100%;
-      margin-block: 10px;
-    }
-
-    .read-more {
-      font-family: lemon, Arial, Helvetica, sans-serif;
-      color: black;
-      background-color: white;
-    }
-
-    .read-more:hover {
-      color: aliceblue;
-      background-color: black;
-    }
-
-    .read-more-dark {
-      font-family: lemon, Arial, Helvetica, sans-serif;
-      color: white;
-      background-color: black;
-    }
-
-    .read-more-dark:hover {
-      color: black;
-      background-color: white;
-    }
-
-    *:hover>*>.icon {
-      filter: brightness(1) invert(1) sepia(.5) hue-rotate(310deg) saturate(1000%);
-    }
-    .game-design-wrap{
-      display: flex;
-      flex-direction: row;
-    }
-
-     
-    footer{
-      position: relative;
-      z-index: 01;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: -500px;
-      margin-bottom: 0;
-      background-color: #383838;
-      color: white;
-      min-height: 500px;
-    }
-    footer * {
-      font-family: Arial, Helvetica, sans-serif !important;
-    }
-    .copy{
-      position: absolute;
-      bottom: 10px;
-    }
-    form{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    input[type="email"]{
-      height: 40px;
-      padding: 5px;
-      margin-left: 15px;
-      margin-right: 0;
-    }
-    input[type="submit"]{
-      height: 38px !important;
-      margin-left: 0;
-      margin-right: 15px;
-    }
-    @media screen and (max-width:780px) {
-      .big {
-        display: none;
-      }
-
-      .small {
-        display: initial;
-      }
-
-      .Big-Logo {
-        width: 100px;
-      }
-
-      .nav-end {
-        margin-left: 35px;
-      }
-
-      .section-card {
-        flex-direction: column;
-      }
-
-      .section-card>p {
-        margin: 35px;
-        width: 377px;
-      }
-
-      .section-2,
-      .section-4 {
-        width: calc(100% - 50px);
-      }
-    
-      .slide-1 {     
-        transform: translateX(-20%);
-      }
-
-      .slide-2 {
-        transform: translateX(-20%) translateY(-100px);
-      }
-      .slide-3 {
-        transform: translateX(-20%) translateY(-200px);
-      } 
-     
-
-      .span-read-more-start,
-      .span-read-more-end {
-        justify-content: center;
-      }
-      footer{flex-direction: column;
-    }
-    }
-
-    @media screen and (max-width:1020px) {
-      .game-design-wrap{
-        flex-direction: column;
-      }
-    }
-   
-  </style>
+  <link rel="stylesheet" href="css/master.css">
 </head>
 
 <body>
@@ -489,7 +100,7 @@
   <main>
     <section class="section-1">
       <img src="images/content/supra-aest.jpg" class="slide-1" alt="">
-      <h1 class="w-100 display-5 text-center">A guide for game developers</h1>
+      <h1 class="header-slide w-100 display-5 text-center">A guide for game developers</h1>
     </section>
 
     <section id="cpp" class="section-2">
@@ -596,7 +207,11 @@
 
 
           <p>
-            <strong>Blender 3D</strong>, is a versatile and free open-source software for 3D modeling, animation, rendering, and more. It's widely used for creating 3D content, including characters, scenes, and visual effects in games, films, and animations. Blender features a user-friendly interface, a powerful set of tools, and an active community, making it a popular choice for artists and developers in the 3D content creation industry.
+            <strong>Blender 3D</strong>, is a versatile and free open-source software for 3D modeling, animation,
+            rendering, and more. It's widely used for creating 3D content, including characters, scenes, and visual
+            effects in games, films, and animations. Blender features a user-friendly interface, a powerful set of
+            tools, and an active community, making it a popular choice for artists and developers in the 3D content
+            creation industry.
 
             <span class="span-read-more-center">
               <button id="un" class="btn btn-light read-more-dark">Read more</button>
@@ -611,7 +226,11 @@
 
 
           <p>
-            <strong>Maya 3D</strong>, by Autodesk, is a premier software for professional 3D modeling and animation. Leveraged in the entertainment industry, it excels in crafting characters, environments, and visual effects for films, games, and animations. Known for its advanced features and robust animation tools, Maya stands as a go-to choice for 3D artists and animators. Its versatility and integration with other Autodesk products contribute to its widespread adoption.
+            <strong>Maya 3D</strong>, by Autodesk, is a premier software for professional 3D modeling and animation.
+            Leveraged in the entertainment industry, it excels in crafting characters, environments, and visual effects
+            for films, games, and animations. Known for its advanced features and robust animation tools, Maya stands as
+            a go-to choice for 3D artists and animators. Its versatility and integration with other Autodesk products
+            contribute to its widespread adoption.
 
             <span class="span-read-more-center">
               <button class="btn btn-light read-more-dark">Read more</button>
@@ -627,8 +246,8 @@
 
   <footer>
 
-    <form action="">
-      <label for="email"> <strong> Subscribe   </strong> </label>
+    <form class="form">
+      <label for="email"> <strong> Subscribe </strong> </label>
       <input type="email" placeholder="Email" id="email">
       <input class="btn btn-outline-light read-more" type="submit" value="Register">
     </form>

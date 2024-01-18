@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--  -->
+
+<head>
+    <title> Inscription </title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Inscription.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            text-align: center;
+            color: #111047;
+            border-radius: 14px;
+            font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+            font-size: 20px;
+            box-sizing: border-box
+        }
+
+        body {
+            background-color: rgb(222, 236, 236);
+            width:450px;
+            margin: auto;
+            padding: 5px;
+        }
+
+        #pass-forget {
+            margin-left: 125px;
+        }
+
+        article {
+            box-shadow: 0 0 32px 8px #c7c7c7;
+            margin: auto;
+
+            width: 400px;
+            background-color: white;
+            display: block;
+            padding-top: 8px;
+            border-bottom: 11px solid rgb(51, 184, 166);
+
+        }
+
+        .email-id {
+            margin-left: -220px;
+
+        }
+
+
+        .nom-id {
+            margin-left: -260px;
+
+        }
+
+
+        .numb-id {
+            margin-left: -110px;
+
+        }
+
+        .date-id {
+            margin-left: -140px;
+
+        }
+
+
+        .prenom-id {
+            margin-left: -240px;
+
+        }
+
+        .civil-id {
+            margin-left: -240px;
+
+        }
+
+        .pass-id {
+            margin-left: -195px;
+        }
+
+        hr {
+            width: 300px;
+        }
+
+        select {
+            border: 2px solid rgb(16, 17, 78);
+            text-align: left;
+            margin-left: auto;
+            width: 300px;
+            height: 38px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 8px;
+            margin-right: auto;
+            cursor: pointer;
+
+        }
+
+        option {
+            text-align: left;
+        }
+
+        input {
+            border: 2px solid rgb(16, 17, 78);
+            text-align: left;
+            margin-left: auto;
+            width: 300px;
+            height: 38px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 8px;
+        }
+
+        label {
+            margin-left: -180px;
+            text-align: left;
+        }
+
+        button {
+            border: none;
+            color: white;
+            background-color: rgb(51, 184, 166);
+            height: 38px;
+            width: 120px;
+
+        }
+
+        a {
+            color: rgb(51, 184, 166);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<!-- here we have the page code -->
+
+<body>
+
+    <br><br>
+    <article>
+        <section>
+
+            <h1>Créer mon compte </h1>
+            <hr>
+
+        </section>
+
+        <br>
+
+        <section>
+            <form>
+                <label class="civil-id" for="text"> Civilité </label>
+                <br>
+                <select name="text" id="text" required>
+                    <ul>
+                        <li>
+                            <option value="M" selected> Monsieur. </option>
+                        </li>
+                        <li>
+                            <option value="Mde"> Mademoiselle. </option>
+                        </li>
+                        <li>
+                            <option value="Md"> Madame. </option>
+                        </li>
+                    </ul>
+
+
+                </select>
+
+                <br>
+                <br>
+
+                <label class="nom-id" for="nom"> Nom </label>
+                <br>
+
+                <input type="text" id="nom" required>
+
+                <br>
+                <br>
+
+                <label class="prenom-id" for="prenom"> Prénom </label>
+                <br>
+
+                <input type="text" id="prenom" required>
+
+                <br>
+                <br>
+
+
+                <label class="date-id" for="date"> Date de naissance </label>
+                <br>
+
+                <input type="date" id="date" required>
+
+                <br>
+                <br>
+
+
+                <label class="numb-id" for="numb"> Numéro de téléphone </label>
+                <br>
+
+                <input type="tel" minlength="10" maxlength="10" placeholder="0#########"
+                    pattern="[0]{1}[5-7]{1}[0-9]{8}" id="numb" required>
+
+                <br>
+                <br>
+
+
+                <label class="civil-id" for="text"> Région </label>
+                <br>
+                <select name="text" id="text">
+                    <ul>
+                        
+                        <li>
+                            <option value="none" selected disabled hidden>Choisir une region</option>
+
+                        </li>
+                        <li>
+                            <option value="Béni Mellal-Khénifra"> Béni Mellal-Khénifra </option>
+                        </li>
+                        <li>
+                            <option value="Drâa-Tafilalet"> Drâa-Tafilalet </option>
+                        </li>
+                        <li>
+                            <option value="Fés-Meknès"> Fés-Meknès </option>
+                        </li>
+                        <li>
+                            <option value="Casablanca-Settat"> Casablanca-Settat </option>
+                        </li>
+                        <li>
+                            <option value="Marrakech-Safi"> Marrakech-Safi </option>
+                        </li>
+                        <li>
+                            <option value="Oriental"> Oriental </option>
+                        </li>
+                        <li>
+                            <option value="Provinces du Sud"> Provinces du Sud </option>
+                        </li>
+                        <li>
+                            <option value="Rabat-Salé-Kénitra"> Rabat-Salé-Kénitra </option>
+                        </li>
+                        <li>
+                            <option value="Souss-Massa"> Souss-Massa </option>
+                        </li>
+                        <li>
+                            <option value="Tanger-Tétouan-Al Hoceima"> Tanger-Tétouan-Al Hoceima </option>
+                        </li>
+                        
+                    </ul>
+
+
+                </select>
+
+
+                <br>
+                <br>
+                <br>
+
+
+
+                <button type="submit">Connexion</button>
+
+
+                <br>
+                <br>
+
+                <p style="display: inline;"> Déja inscrit ?</p>
+
+                <nav style="display: inline;">
+                    <a href="index.html"> Se connecter </a>
+        </section>
+        </nav>
+
+        <br><br>
+
+    </article>
+
+    <br><br>
+</body>
+
+
+
+</html>

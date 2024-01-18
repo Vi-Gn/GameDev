@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--  -->
+
+<head>
+    <title> Se Connecter </title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Connexion.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* article {
+            border-bottom: 11px solid rgb(51, 184, 166);
+            box-shadow: 0 0 32px 8px #c7c7c7;
+            margin: auto;
+            background-color: white;
+            padding-top: 8px;
+        }
+
+        .email-id {
+            margin-left: -250px;
+        }
+
+        .pass-id {
+            margin-left: -195px;
+        }
+
+        input {
+            border: 2px solid rgb(16, 17, 78);
+            text-align: left;
+            margin-left: auto;
+            width: 300px;
+            height: 38px;
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+
+        label {
+            margin-left: -180px;
+            text-align: left;
+            color: rgb(16, 17, 78);
+        }
+
+        button {
+            border: 1px solid rgb(255, 255, 255);
+            color: white;
+            background-color: rgb(51, 184, 166);
+            height: 38px;
+            min-width: 120px;
+        }
+
+        a {
+            color: rgb(51, 184, 166);
+            text-decoration: none;
+        } */
+    </style>
+
+    <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+
+<!-- here we have the page code -->
+
+<body>
+    <header>
+
+        <nav class="nav-start">
+            <a class="Big-Logo" href="simple.html">
+                <span class="big Big-Logo-1">Game<span class="Big-Logo-2">Dev</span></span>
+                <span class="small Big-Logo-1">G<span class="Big-Logo-2">D</span></span>
+            </a>
+        </nav>
+
+        <nav class="nav-mid">
+            <ul>
+
+                <li>
+                    <a href="simple.html"> <img class="icon" src="../images/icons/homeW.png" alt=""> <span class="big">
+                            <br> Home
+                        </span></a>
+                </li>
+                <li>
+                    <a href="about.html"> <img class="icon" src="../images/icons/newsW.png" alt=""> <span class="big">
+                            <br>
+                            About Us
+                        </span> </a>
+                </li>
+                <li>
+                    <a href="contact.html"> <img class="icon" src="../images/icons/contactW.png" alt=""> <br> <span
+                            class="big">
+                            Contact </span> </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <nav class="nav-end">
+            <ul>
+
+                <li> <a href="#"> <img class="icon" src="../images/icons/loginW.png" alt=""> <br> <span
+                            class="big">Login</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <aside>
+        <nav>
+            <ul class="aside-nav">
+
+
+
+                <li>
+                    <div class="btn-group">
+                        <a href="#cpp" class="btn btn-outline-light"> <span class="big"> C++ </span> <img
+                                class="aside-nav-icons small" src="../images/content/cpp-inv.png" alt=""></a>
+                        <a href="#cs" class="btn btn-outline-light"> <span class="big"> C# </span> <img
+                                class="aside-nav-icons small" src="../images/content/c-sharp-inv.png" alt=""></a>
+                    </div>
+                </li>
+                <span class=" mx-2"></span>
+                <!-- <div class="w-5px h-50px bg-white mx-2"></div> -->
+                <span class="mx-2"></span>
+
+                <li>
+                    <div class="btn-group">
+                        <a href="#ue" class="btn btn-outline-light"> <span class="big"> Unreal </span> <img
+                                class="aside-nav-icons small" src="../images/content/Unreal.png" alt=""> </a>
+                        <a href="#un" class="btn btn-outline-light"> <span class="big"> Unity </span> <img
+                                class="aside-nav-icons small" src="../images/content/Unity1.png" alt=""></a>
+                    </div>
+                </li>
+
+                <span class="mx-2"></span>
+                <!-- <div class="w-5px h-50px bg-white mx-2"></div> -->
+                <span class="mx-2"></span>
+
+                <li>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-outline-light"> <span class="big"> Blender </span> <img
+                                class="aside-nav-icons small" src="../images/content/blenderIcon-invert.png" alt="">
+                        </a>
+                        <a href="#" class="btn btn-outline-light"><span class="big"> Maya </span> <img
+                                class="aside-nav-icons last small" src="../images/content/maya-icon-invert.png" alt="">
+                        </a>
+                    </div>
+                </li>
+
+
+            </ul>
+        </nav>
+    </aside>
+
+
+    <main>
+
+        <section class="section-1">
+            <img src="../images/content/supralast.jpg" class="slide-1-form" alt="">
+            <h1 class="header-slide-form w-100 display-5 text-center">Login</h1>
+        </section>
+
+
+        <form class="login-form">
+            <div class="form-group">
+                <label class="email-id control-label" for="email"> Email </label>
+
+                <input type="email" id="email" class="form-control" required>
+            </div>
+
+
+            <div class="form-group">
+                <label class="pass-id control-label" for="pass"> Mot de passe </label>
+                <br>
+                <input type="password" id="pass" class="form-control" required>
+
+            </div>
+        </form>
+
+
+    </main>
+    <!-- 
+    <main>
+
+        
+            <h1>Se Connecter</h1>
+            <hr style="width: 300px; ">
+            <br>
+        
+
+        
+            <form class="container">
+                <div class="form-group">
+                    <label class="email-id" for="email"> Email </label>
+
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="pass-id" for="pass"> Mot de passe </label>
+                    <br>
+                    <input type="password" id="pass" class="form-control" required>
+
+                </div>
+
+
+                <p style="margin-left: 125px;"> Mot de passe oublié ? </p>
+
+
+                <br>
+
+
+
+                <button type="submit">Connexion</button>
+            </form>
+        
+
+
+            <p>C'est votre première visite ?</p>
+            <nav>
+                <a href="inscription.html">Créez votre compte en quelques instans</a>
+            </nav>
+    
+
+        <br><br><br>
+        </main>
+-->
+
+</body>
+
+
+
+</html>

@@ -68,31 +68,28 @@ section{
   margin-left: 220px;
   min-height: 300px;
 } */
-
+/* 
 a {
   color: white;
   text-decoration: none;
 }
 a:hover {
   color: black;
-}
+} */
 
-header span,
+/* header span,
 a {
   font-family: Lemon, Verdana, Pacifico;
   font-size: medium;
   font-weight: 100;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
+} */
 
 
 
 
-li {
+
+
+/* li {
   display: inline-block;
   padding: 0px;
   text-align: center;
@@ -101,10 +98,10 @@ li {
 li:hover {
   border-color: black;
   cursor: pointer;
-}
-
+} */
+/* 
 p{
   font-family: Arial, Helvetica, sans-serif;
   font-size: large;
-  /* word-break: break-all; */
-}
+  // word-break: break-all; 
+} */
