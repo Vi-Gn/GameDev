@@ -8,7 +8,6 @@ html {
   box-sizing: border-box;
   text-align: justify;
   transition: transform .5s;
-  /* overflow-x: hidden; */
   font-family: Lemon, Verdana, Pacifico; /* -------- check ----------*/
 }
 
@@ -346,6 +345,16 @@ footer input[type="submit"] {
   height: 38px !important;
   margin-left: 0;
   margin-right: 15px;
+}
+
+
+.section-1,
+.section-2,
+.section-3,
+.section-4,
+.section-5,
+.section-6{
+  overflow-x: hidden;
 }
 
 /* --------------------------- Check --------------------------*/
