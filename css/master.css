@@ -357,6 +357,15 @@ footer input[type="submit"] {
   overflow-x: hidden;
 }
 
+#go-top{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  filter: invert(1);
+  background-color: #c2c2c2;
+  border-radius: 50%;
+}
+
 /* --------------------------- Check --------------------------*/
 
 a {
@@ -462,4 +471,17 @@ li:hover {
   background-color: #00000075;
   color: aliceblue;
   font-size: 30px !important;
+}
+
+::-webkit-scrollbar{
+  background-color: #383838;
+}
+
+::-webkit-scrollbar-button{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
 }
