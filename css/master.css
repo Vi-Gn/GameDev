@@ -477,9 +477,10 @@ li:hover {
 
 
 .slide-1-form{
-  object-fit: contain;
+  object-fit: cover;
   width: max(100%, 1080px);
   filter: blur(3px) /*saturate(0)*/;
+  height: 100%;
 }
 
 .header-slide-form{ 
@@ -548,6 +549,7 @@ li:hover {
 }
 .main-login > section{
   height: 80%;
+  min-height: 700px;
 }
 
 input::placeholder{
