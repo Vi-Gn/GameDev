@@ -290,10 +290,22 @@ p {
   color: white;
   background-color: black;
 }
+.read-more-dark-big {
+  font-family: lemon, Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: #666666;
+  width: 100%;
+  border-radius: 5px !important;
+}
 
 .read-more-dark:hover {
   color: black;
   background-color: white;
+}
+
+.read-more-dark-big:hover {
+  color: white;
+  background-color: black;
 }
 
 *:hover>*>.icon {
@@ -442,6 +454,12 @@ li:hover {
     justify-content: center;
   }
 
+  .login-form{
+    flex-direction: column;
+   
+  }
+
+  
   footer {
     flex-direction: column;
   }
@@ -461,7 +479,7 @@ li:hover {
 .slide-1-form{
   object-fit: contain;
   width: max(100%, 1080px);
-  filter: blur(10px) saturate(0);
+  filter: blur(3px) /*saturate(0)*/;
 }
 
 .header-slide-form{ 
@@ -472,6 +490,7 @@ li:hover {
   color: aliceblue;
   font-size: 30px !important;
 }
+
 
 ::-webkit-scrollbar{
   background-color: #383838;
@@ -484,4 +503,65 @@ li:hover {
 ::-webkit-scrollbar-thumb{
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
+}
+
+
+.login-wrapper{ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 15px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 80%;
+  min-height: 520px;
+  max-height: 600px;
+  background-color: aliceblue;
+  color: black;
+  transform: translate(-50%,-50%);
+  /* margin-top: 40px; */
+  border-radius: 15px;
+}
+
+
+
+.email-id,
+.pass-id{
+  font-family: lemon, Helvetica, sans-serif;
+  font-size: large;
+}
+
+.login-form{
+}
+
+.login-form > div{
+  /* margin-block: 30px; */
+}
+
+.main-login{
+  /* height: 1080px; */
+  width: 100%;
+}
+.main-login > section{
+  height: 80%;
+}
+
+input::placeholder{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  padding: 10px;
+}
+
+.forgot-pass{
+  color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
+.login-options{
+  text-align: center;
 }
