@@ -42,7 +42,9 @@ header {
   color: white;
   font-size: 30px;
 }
-
+.nav-mid{
+  /* margin-left: 100px; */
+}
 .nav-mid>ul>* {
   margin-inline: 10px;
 }
