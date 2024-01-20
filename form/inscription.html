@@ -5,278 +5,177 @@
 <!--  -->
 
 <head>
-    <title> Inscription </title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Inscription.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            text-align: center;
-            color: #111047;
-            border-radius: 14px;
-            font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
-            font-size: 20px;
-            box-sizing: border-box
-        }
-
-        body {
-            background-color: rgb(222, 236, 236);
-            width:450px;
-            margin: auto;
-            padding: 5px;
-        }
-
-        #pass-forget {
-            margin-left: 125px;
-        }
-
-        article {
-            box-shadow: 0 0 32px 8px #c7c7c7;
-            margin: auto;
-
-            width: 400px;
-            background-color: white;
-            display: block;
-            padding-top: 8px;
-            border-bottom: 11px solid rgb(51, 184, 166);
-
-        }
-
-        .email-id {
-            margin-left: -220px;
-
-        }
+  <title> Sign Up </title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Connexion.">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
 
 
-        .nom-id {
-            margin-left: -260px;
-
-        }
-
-
-        .numb-id {
-            margin-left: -110px;
-
-        }
-
-        .date-id {
-            margin-left: -140px;
-
-        }
-
-
-        .prenom-id {
-            margin-left: -240px;
-
-        }
-
-        .civil-id {
-            margin-left: -240px;
-
-        }
-
-        .pass-id {
-            margin-left: -195px;
-        }
-
-        hr {
-            width: 300px;
-        }
-
-        select {
-            border: 2px solid rgb(16, 17, 78);
-            text-align: left;
-            margin-left: auto;
-            width: 300px;
-            height: 38px;
-            padding-left: 20px;
-            padding-right: 20px;
-            margin-top: 8px;
-            margin-right: auto;
-            cursor: pointer;
-
-        }
-
-        option {
-            text-align: left;
-        }
-
-        input {
-            border: 2px solid rgb(16, 17, 78);
-            text-align: left;
-            margin-left: auto;
-            width: 300px;
-            height: 38px;
-            padding-left: 20px;
-            padding-right: 20px;
-            margin-top: 8px;
-        }
-
-        label {
-            margin-left: -180px;
-            text-align: left;
-        }
-
-        button {
-            border: none;
-            color: white;
-            background-color: rgb(51, 184, 166);
-            height: 38px;
-            width: 120px;
-
-        }
-
-        a {
-            color: rgb(51, 184, 166);
-            text-decoration: none;
-        }
-    </style>
+  <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/master.css">
 </head>
 
 <!-- here we have the page code -->
 
 <body>
+  <header>
 
-    <br><br>
-    <article>
-        <section>
+    <nav class="nav-start">
+      <a class="Big-Logo" href="simple.html">
+        <span class="big Big-Logo-1">Game<span class="Big-Logo-2">Dev</span></span>
+        <span class="small Big-Logo-1">G<span class="Big-Logo-2">D</span></span>
+      </a>
+    </nav>
 
-            <h1>Créer mon compte </h1>
-            <hr>
+    <nav class="nav-mid">
+      <ul>
 
-        </section>
+        <li>
+          <a href="simple.html"> <img class="icon" src="../images/icons/homeW.png" alt=""> <span class="big">
+              <br> Home
+            </span></a>
+        </li>
+        <li>
+          <a href="about.html"> <img class="icon" src="../images/icons/newsW.png" alt=""> <span class="big">
+              <br>
+              About Us
+            </span> </a>
+        </li>
+        <li>
+          <a href="contact.html"> <img class="icon" src="../images/icons/contactW.png" alt=""> <br> <span class="big">
+              Contact </span> </a>
+        </li>
 
-        <br>
+      </ul>
+    </nav>
 
-        <section>
-            <form>
-                <label class="civil-id" for="text"> Civilité </label>
-                <br>
-                <select name="text" id="text" required>
-                    <ul>
-                        <li>
-                            <option value="M" selected> Monsieur. </option>
-                        </li>
-                        <li>
-                            <option value="Mde"> Mademoiselle. </option>
-                        </li>
-                        <li>
-                            <option value="Md"> Madame. </option>
-                        </li>
-                    </ul>
+    <nav class="nav-end">
+      <ul>
 
+        <li> <a href="#"> <img class="icon" src="../images/icons/loginW.png" alt=""> <br> <span class="big">Login</span>
+          </a>
+        </li>
 
-                </select>
+      </ul>
+    </nav>
 
-                <br>
-                <br>
-
-                <label class="nom-id" for="nom"> Nom </label>
-                <br>
-
-                <input type="text" id="nom" required>
-
-                <br>
-                <br>
-
-                <label class="prenom-id" for="prenom"> Prénom </label>
-                <br>
-
-                <input type="text" id="prenom" required>
-
-                <br>
-                <br>
-
-
-                <label class="date-id" for="date"> Date de naissance </label>
-                <br>
-
-                <input type="date" id="date" required>
-
-                <br>
-                <br>
-
-
-                <label class="numb-id" for="numb"> Numéro de téléphone </label>
-                <br>
-
-                <input type="tel" minlength="10" maxlength="10" placeholder="0#########"
-                    pattern="[0]{1}[5-7]{1}[0-9]{8}" id="numb" required>
-
-                <br>
-                <br>
-
-
-                <label class="civil-id" for="text"> Région </label>
-                <br>
-                <select name="text" id="text">
-                    <ul>
-                        
-                        <li>
-                            <option value="none" selected disabled hidden>Choisir une region</option>
-
-                        </li>
-                        <li>
-                            <option value="Béni Mellal-Khénifra"> Béni Mellal-Khénifra </option>
-                        </li>
-                        <li>
-                            <option value="Drâa-Tafilalet"> Drâa-Tafilalet </option>
-                        </li>
-                        <li>
-                            <option value="Fés-Meknès"> Fés-Meknès </option>
-                        </li>
-                        <li>
-                            <option value="Casablanca-Settat"> Casablanca-Settat </option>
-                        </li>
-                        <li>
-                            <option value="Marrakech-Safi"> Marrakech-Safi </option>
-                        </li>
-                        <li>
-                            <option value="Oriental"> Oriental </option>
-                        </li>
-                        <li>
-                            <option value="Provinces du Sud"> Provinces du Sud </option>
-                        </li>
-                        <li>
-                            <option value="Rabat-Salé-Kénitra"> Rabat-Salé-Kénitra </option>
-                        </li>
-                        <li>
-                            <option value="Souss-Massa"> Souss-Massa </option>
-                        </li>
-                        <li>
-                            <option value="Tanger-Tétouan-Al Hoceima"> Tanger-Tétouan-Al Hoceima </option>
-                        </li>
-                        
-                    </ul>
-
-
-                </select>
-
-
-                <br>
-                <br>
-                <br>
+  </header>
 
 
 
-                <button type="submit">Connexion</button>
+  <aside>
+
+  </aside>
+
+  <main class="main-login">
+
+    <section class="section-1 height-main">
+      <img src="../images/content/supralast.jpg" class="slide-1-form" alt="">
+      <!-- <h1 class="header-slide-form w-100 display-5 text-center">Login</h1> -->
+
+      <div class="login-wrapper">
+        <h2 class="my-4"> Sign Up </h2>
 
 
-                <br>
-                <br>
+        <form class="my-4 login-form">
 
-                <p style="display: inline;"> Déja inscrit ?</p>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <img class="input-group-text" src="../images/icons/news.png" alt="" style="height: 100%;">
+              <input type="text" id="user" class="form-control" placeholder="User" required>
+            </div>
+          </div>
 
-                <nav style="display: inline;">
-                    <a href="index.html"> Se connecter </a>
-        </section>
-        </nav>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <img class="input-group-text" src="../images/icons/contact.png" alt="" style="height: 100%;">
+              <input type="email" id="email" class="form-control" placeholder="Email" required>
+            </div>
+          </div>
 
-        <br><br>
 
-    </article>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <img class="input-group-text" src="../images/icons/lock.png" alt="" style="height: 100%;">
+              <input type="password" id="pass" class="form-control" placeholder="Password" required>
+            </div>
+          </div>
 
-    <br><br>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <img class="input-group-text" src="../images/icons/lock.png" alt="" style="height: 100%;">
+              <input type="password" id="pass" class="form-control" placeholder="Confirm Password" required>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="span-read-more-end">
+            <button type="submit" class="btn btn-light read-more-dark-big my-3">Register</button>
+          </div>
+
+          <div>
+            <p class="text-center">Or <a class="forgot-pass" href="index.html"> <strong> Login </strong> </a>
+              Using</p>
+          </div>
+          <div class="login-options mx-auto ">
+            <a href="https://www.facebook.com/login" target="_blank"><img src="../images/content/facebook.png" alt="" width="50"
+                height="50"></a>
+            <a href="https://twitter.com/i/flow/login" target="_blank"><img src="../images/content/twitter.png" alt="" width="42"
+                height="42"></a>
+            <a href="https://accounts.google.com/" target="_blank"><img src="../images/content/Google.png" alt="" width="50"
+                height="50"></a>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-2">
+    <form class="form">
+      <label for="email"> <strong> Subscribe </strong> </label>
+      <input type="email" placeholder="Email" id="email">
+      <input class="btn btn-outline-light read-more" type="submit" value="Register">
+    </form>
+
+    <div class="container" style="max-width: 500px;">
+
+      <address class="row">
+        <div class="col">
+          <div class="row">
+            <p>Adress : </p>
+          </div>
+          <div class="row">
+            <p>Email : </p>
+          </div>
+          <div class="row">
+            <p>Phone : </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row">
+            <p>50, rue example, Sale </p>
+          </div>
+          <div class="row">
+            <p>example@ex.com </p>
+          </div>
+          <div class="row">
+            <p> 06 00 55 90 69 </p>
+          </div>
+        </div>
+      </address>
+
+    </div>
+
+    <span class="copy"> Copyright &copy; 2024 <strong>Anouar</strong> , Inc. All rights reserved. </span>
+
+    <a id="go-top" href="#top"><img src="../images/icons/circle_up.png" alt="" width="50" height="50"></a>
+
+
+  </footer>
+
 </body>
 
 
