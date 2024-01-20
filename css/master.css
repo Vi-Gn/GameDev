@@ -340,11 +340,7 @@ footer * {
   bottom: 10px;
 }
 
-.form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 footer input[type="email"] {
   height: 40px;
@@ -448,7 +444,6 @@ li:hover {
     transform: translateX(-20%) translateY(-200px);
   }
 
-
   .span-read-more-start,
   .span-read-more-end {
     justify-content: center;
@@ -469,7 +464,10 @@ li:hover {
   .about-right{
     height: 1000px !important;
   }  
-
+  .footer-wrap{
+    flex-direction: column;
+    gap: 50px !important;
+  }
 }
 
 @media screen and (max-width:1020px) {
@@ -477,6 +475,7 @@ li:hover {
     flex-direction: column;
     height: auto !important;
   }
+  
 }
 
 @media screen and (max-width:1750px) {
@@ -642,6 +641,25 @@ input::placeholder{
   font-size: 40px;
 }
 
-.footer-adress{
-  width: 50vw;
+.footer-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.footer-wrap *{
+  flex: 1;
+}
+.footer-adress th,
+.footer-adress td{
+  width: 200px;
+  height: 50px;
+  justify-content: flex-end;
+}
+.footer-adress th{
+  width: 100px;
+}
+.form {
+  display: flex;
+  align-items: center;
 }
