@@ -493,7 +493,6 @@ li:hover {
     height: auto !important;
   }
   .about-left{
-    background-color: black;
     height: 400px !important;
   }
   .about-middle{
@@ -621,6 +620,8 @@ input::placeholder{
 }
 .about-left{
   background-color: #383838;
+  background-image: url("../images/content/CppUe.jpg");
+  background-size: cover;
   width: 40%;
 }
 .about-right{
