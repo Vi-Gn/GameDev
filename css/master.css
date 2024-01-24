@@ -8,7 +8,8 @@ html {
   box-sizing: border-box;
   text-align: justify;
   transition: transform .5s;
-  font-family: Lemon, Verdana, Pacifico; /* -------- check ----------*/
+  font-family: Lemon, Verdana, Pacifico;
+  /* -------- check ----------*/
 }
 
 header {
@@ -42,9 +43,11 @@ header {
   color: white;
   font-size: 30px;
 }
-.nav-mid{
+
+.nav-mid {
   /* margin-left: 100px; */
 }
+
 .nav-mid>ul>* {
   margin-inline: 10px;
 }
@@ -292,6 +295,7 @@ p {
   color: white;
   background-color: black;
 }
+
 .read-more-dark-big {
   font-family: lemon, Arial, Helvetica, sans-serif;
   color: white;
@@ -363,11 +367,11 @@ footer input[type="submit"] {
 .section-3,
 .section-4,
 .section-5,
-.section-6{
+.section-6 {
   overflow-x: hidden;
 }
 
-#go-top{
+#go-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -401,6 +405,63 @@ li {
 li:hover {
   border-color: black;
   cursor: pointer;
+}
+
+
+
+@media screen and (max-width:1750px) {
+  
+  .about-par {
+    width: 450px !important;
+  }
+}
+
+@media screen and (max-width:1480px) {
+  .about-par {
+    width: 300px !important;
+  }
+}
+
+@media screen and (max-width:1230px) {
+  
+  .about-big,
+  .about-right,
+  .about-left {
+    flex-direction: column !important;
+    width: auto !important;
+  }
+
+
+  .about-big {
+    height: auto !important;
+  }
+  
+  .about-left {
+    height: 400px !important;
+    /* width: 30%; */
+  }
+  
+  .about-middle {
+    width: 100% !important;
+    transform: translateY(-50%) !important;
+    border-radius: 50%;
+    height: 0 !important;
+  }
+  
+  .about-right {
+    height: 800px !important;
+    /* width: 70%; */
+  }
+  .about-par {
+    width: 600px !important;
+  }
+}
+
+@media screen and (max-width:1020px) {
+  .game-design-wrap {
+    flex-direction: column;
+    height: auto !important;
+  }
 }
 
 @media screen and (max-width:780px) {
@@ -451,75 +512,45 @@ li:hover {
     justify-content: center;
   }
 
-  .login-form{
+  .login-form {
     flex-direction: column;
-   
+
   }
 
-  
+
   footer {
     flex-direction: column;
   }
-  .about-par{
+
+  .about-par {
     width: 400px !important;
   }
-  .about-right{
-    height: 1000px !important;
-  }  
-  .footer-wrap{
+
+  .about-right {
+    /* height: 1000px !important; */
+  }
+
+  .footer-wrap {
     flex-direction: column;
     gap: 50px !important;
   }
-}
-
-@media screen and (max-width:1020px) {
-  .game-design-wrap {
-    flex-direction: column;
-    height: auto !important;
-  }
-  
-}
-
-@media screen and (max-width:1750px) {
-  .about-big,
-  .about-right,
-  .about-left  {
-    flex-direction: column !important;
-    width: auto !important;
-  }
-  
- 
-  .about-big{
-    height: auto !important;
-  }
-  .about-left{
-    height: 400px !important;
-  }
-  .about-middle{
-    width: 100% !important;
-    transform: translateY(-50%)!important;
-    border-radius: 50%;
-    height: 0 !important;
-  }
-  .about-right{
-    height: 800px;
-  }
-  
 }
 
 /*-------------------------------------*/
 
 
 
-.slide-1-form{
+.slide-1-form {
   object-fit: cover;
   position: absolute;
-  filter: blur(3px) /*saturate(0)*/;
+  filter: blur(3px)
+    /*saturate(0)*/
+  ;
   height: 100%;
   width: 100%;
 }
 
-.header-slide-form{ 
+.header-slide-form {
   position: absolute;
   top: 8%;
   padding-block: 30px;
@@ -529,22 +560,22 @@ li:hover {
 }
 
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   background-color: #383838;
   width: 10px;
 }
 
-::-webkit-scrollbar-button{
+::-webkit-scrollbar-button {
   background-color: rgba(0, 0, 0, 0);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: rgb(143, 143, 143);
 }
 
 
-.login-wrapper{ 
+.login-wrapper {
   position: relative;
   top: min(80vw, 50%);
   left: 50%;
@@ -554,8 +585,8 @@ li:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: max( 400px, min(80vw, 600px));
-  height: max( 600px, min(80vmax, 600px));
+  width: max(400px, min(80vw, 600px));
+  height: max(600px, min(80vmax, 600px));
   background-color: aliceblue;
   color: black;
   transform: translate(-50%, -50%);
@@ -563,107 +594,119 @@ li:hover {
   border-radius: 15px;
   margin-block: 50px;
 }
-.inscription-padding{
+
+.inscription-padding {
   padding-block: 350px;
   /* content: "dwdw"; */
 }
 
 .email-id,
-.pass-id{
+.pass-id {
   font-family: lemon, Helvetica, sans-serif;
   font-size: large;
 }
 
 
 
-.main-login{
+.main-login {
   overflow: hidden;
   height: calc(100vh - 500px - 80px);
   min-height: 1000px;
-  
+
 }
-.height-main{
+
+.height-main {
   height: 100%;
 }
 
 
 
-input::placeholder{
+input::placeholder {
   font-family: Arial, Helvetica, sans-serif;
   font-size: medium;
   padding: 10px;
 }
 
-.forgot-pass{
+.forgot-pass {
   color: #666666;
   font-family: Arial, Helvetica, sans-serif;
   font-size: medium;
 }
 
-.login-options{
+.login-options {
   text-align: center;
 }
 
 
 
-.about-img{
+.about-img {
   overflow: hidden;
 }
-.about-img > img{
+
+.about-img>img {
   object-position: -50px;
 }
-.about-big{
+
+.about-big {
   display: flex;
   justify-content: center;
   height: 800px;
   background-color: white;
 }
-.about-left{
+
+.about-left {
   background-color: #383838;
   background-image: url("../images/content/CppUe.jpg");
   background-size: cover;
   width: 40%;
 }
-.about-right{
+
+.about-right {
   width: 60%;
 }
-.about-middle{
+
+.about-middle {
   transform: translateX(-50%);
   width: 0;
   border-radius: 50%;
   transition: 0s;
 }
-.about-par{
+
+.about-par {
   width: 600px;
 }
 
-.about-par > p{
-  font-size: 26px;
+.about-par>p {
+  font-size: 1.2rem;
 }
 
-.about-par > h1{
-  font-size: 40px;
+.about-par>h1 {
+  font-size: 2.5rem;
 }
 
-.footer-wrap{
+.footer-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 80px;
   padding: 15px;
 }
-.footer-wrap *{
+
+.footer-wrap * {
   flex: 1;
 }
+
 .footer-adress th,
-.footer-adress td{
+.footer-adress td {
   width: 200px;
   height: 50px;
   justify-content: flex-end;
 }
-.footer-adress th{
+
+.footer-adress th {
   width: 100px;
 }
+
 .form {
   display: flex;
   align-items: center;
