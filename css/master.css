@@ -610,7 +610,7 @@ li:hover {
 
 .main-login {
   overflow: hidden;
-  height: calc(100vh - 500px - 80px);
+  height: calc(100vh - 500px - 80px - 40px);
   min-height: 1000px;
 
 }
